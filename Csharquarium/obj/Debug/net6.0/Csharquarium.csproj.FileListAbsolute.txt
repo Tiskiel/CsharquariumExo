@@ -1,0 +1,15 @@
+D:\visualStudio2022\CsharquariumExo\Csharquarium\bin\Debug\net6.0\Csharquarium.exe
+D:\visualStudio2022\CsharquariumExo\Csharquarium\bin\Debug\net6.0\Csharquarium.deps.json
+D:\visualStudio2022\CsharquariumExo\Csharquarium\bin\Debug\net6.0\Csharquarium.runtimeconfig.json
+D:\visualStudio2022\CsharquariumExo\Csharquarium\bin\Debug\net6.0\Csharquarium.dll
+D:\visualStudio2022\CsharquariumExo\Csharquarium\bin\Debug\net6.0\Csharquarium.pdb
+D:\visualStudio2022\CsharquariumExo\Csharquarium\obj\Debug\net6.0\Csharquarium.csproj.AssemblyReference.cache
+D:\visualStudio2022\CsharquariumExo\Csharquarium\obj\Debug\net6.0\Csharquarium.GeneratedMSBuildEditorConfig.editorconfig
+D:\visualStudio2022\CsharquariumExo\Csharquarium\obj\Debug\net6.0\Csharquarium.AssemblyInfoInputs.cache
+D:\visualStudio2022\CsharquariumExo\Csharquarium\obj\Debug\net6.0\Csharquarium.AssemblyInfo.cs
+D:\visualStudio2022\CsharquariumExo\Csharquarium\obj\Debug\net6.0\Csharquarium.csproj.CoreCompileInputs.cache
+D:\visualStudio2022\CsharquariumExo\Csharquarium\obj\Debug\net6.0\Csharquarium.dll
+D:\visualStudio2022\CsharquariumExo\Csharquarium\obj\Debug\net6.0\refint\Csharquarium.dll
+D:\visualStudio2022\CsharquariumExo\Csharquarium\obj\Debug\net6.0\Csharquarium.pdb
+D:\visualStudio2022\CsharquariumExo\Csharquarium\obj\Debug\net6.0\Csharquarium.genruntimeconfig.cache
+D:\visualStudio2022\CsharquariumExo\Csharquarium\obj\Debug\net6.0\ref\Csharquarium.dll
