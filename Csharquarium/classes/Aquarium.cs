@@ -48,24 +48,26 @@ namespace Csharquarium.classes
                     {
                         naissance.Add(bb);
                         
-                        Console.WriteLine($"🌱 Le bébé algue est né 🌱");
+                        Console.WriteLine($"🌾 Le bébé algue est né 🌾"); 
                     }
-                
-                
+
+                EtreVivant bbP = ev.SeReproduire(LiVivant[RandomAll.GetRandom(LiVivant.Count)]);
+                if (bbP != null)
+                {
+                    naissance.Add(bbP);
+                    Console.WriteLine($" 🐟 Le bébé , {bbP.GetType().Name} est né 🐟 "); 
+                }
+
+
             }
 
-            //List<EtreVivant> Poisson = LiVivant.Where(ev => ev is Poisson && ev.PtsVie > 0).ToList();
-            foreach (EtreVivant ev in LiVivant)
-            {
+            ////List<EtreVivant> Poisson = LiVivant.Where(ev => ev is Poisson && ev.PtsVie > 0).ToList();
+            //foreach (EtreVivant ev in LiVivant)
+            //{
                 
-                //List<EtreVivant> poisson = Poisson;
-                EtreVivant bb = ev.SeReproduire(LiVivant[RandomAll.GetRandom(LiVivant.Count)]);
-                if (bb != null)
-                {
-                    naissance.Add(bb);
-                    Console.WriteLine($" 🐠 Le bébé , {bb.GetType().Name} est né 🐠 ");
-                }
-            }
+            //    //List<EtreVivant> poisson = Poisson;
+                
+            //}
            
 
 
@@ -88,7 +90,7 @@ namespace Csharquarium.classes
                 if (algue.PtsVie <= 0)
                 {
                     mort.Add(algue);
-                    Console.WriteLine($" 💀 l'{algue} a été mangée par {herbi} 💀 ");
+                    Console.WriteLine($" ☠ l'{algue.GetType().Name} a été mangée par {herbi.Name} ☠ "); 
                 }
                 }
 
@@ -106,7 +108,7 @@ namespace Csharquarium.classes
                 if (poisson.PtsVie <= 0)
                 {
                     mort.Add(poisson);
-                    Console.WriteLine($" 👻 Le {poisson.GetType().Name} à subit une attaque qui à eu raison de lui ! 👻 ");
+                    Console.WriteLine($" 👻 Le {poisson.GetType().Name} à subit une attaque de {carni.Name} qui à eu raison de lui ! 👻 "); 
                 }
             }
 
@@ -114,7 +116,7 @@ namespace Csharquarium.classes
             for (int i = 0; i < LiVivant.Count; i++)
             {
 
-                Algue test = new Algue(10, 10);
+                
 
                 LiVivant[i].PtsVie--;
                 
@@ -122,14 +124,14 @@ namespace Csharquarium.classes
 
                 if (LiVivant[i].GetType() is Algue)
                 {
-                    test.PvUp();
+                    LiVivant[i].PtsVie += 1;
                     LiVivant[i].Viellir();
                 }
 
                 if (LiVivant[i].Age == 20 || LiVivant[i].PtsVie <= 0)
                 {
                     mort.Add(LiVivant[i]);
-                    Console.WriteLine($" 💀 Le/l'{LiVivant[i].GetType().Name} est mort en ce jour ! 💀 ");
+                    Console.WriteLine($" ☠ Le/l'{LiVivant[i].GetType().Name} est mort en ce jour ! ☠ ");
                 }
             }
 
@@ -149,11 +151,14 @@ namespace Csharquarium.classes
 
             int CountAl = 0;
             int CountPs = 0;
+
             for (int i = 0; i < LiVivant.Count; i++)
             {
                 if (LiVivant[i].GetType() is Algue)
                 {
+
                     CountAl++;
+
                 }else if (LiVivant[i].GetType() is Poisson)
                 {
                     CountPs++;
@@ -164,10 +169,10 @@ namespace Csharquarium.classes
             
         }
 
-        void sauveDonnes( )
-        {
+        //void sauveDonnes( )
+        //{
 
-        }
+        //}
 
 
         public void AjoutEtreVivant(EtreVivant ev)

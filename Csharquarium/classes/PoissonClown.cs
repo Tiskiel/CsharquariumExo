@@ -27,8 +27,16 @@ namespace Csharquarium.classes
         }
         public override EtreVivant SeReproduire(EtreVivant partenaire)
         {
-            if ((this.PtsVie > 5 && partenaire.PtsVie >5) && (this.GetType() == partenaire.GetType()))
+            if (this.GetType() != partenaire.GetType() || this.PtsVie < 5 || partenaire.PtsVie < 5)
             {
+
+
+                return null;
+
+
+
+            }else if ((this.PtsVie > 5 && partenaire.PtsVie > 5) && (this.GetType() == partenaire.GetType()))
+                {
                 
                 int rdnValue = RandomAll.GetRandom(1);
 
@@ -40,11 +48,7 @@ namespace Csharquarium.classes
                     if ((this.Sexe == partenaire.Sexe) && (this.Sexe == Sexe.Femelle))
                     {
                         this.Sexe = Sexe.Male;
-                    }
-                    else if ((this.Sexe == partenaire.Sexe) && (this.Sexe == Sexe.Male))
-                    { 
-                        this.Sexe = Sexe.Femelle;
-                    }
+
                     if (rdnValue == 1)
                     {
 
@@ -57,6 +61,25 @@ namespace Csharquarium.classes
                         EtreVivant mPoisson = new PoissonClown(Sexe.Male, randomNameM, 0);
                         return mPoisson;
                     }
+                }
+                    else if ((this.Sexe == partenaire.Sexe) && (this.Sexe == Sexe.Male))
+                    { 
+                        this.Sexe = Sexe.Femelle;
+
+                    if (rdnValue == 1)
+                    {
+
+                        EtreVivant fPoisson = new PoissonClown(Sexe.Femelle, randomNameF, 0);
+                        return fPoisson;
+                    }
+                    else
+                    {
+
+                        EtreVivant mPoisson = new PoissonClown(Sexe.Male, randomNameM, 0);
+                        return mPoisson;
+                    }
+                }
+                   
                 
             }
             return null;

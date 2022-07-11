@@ -27,8 +27,13 @@ namespace Csharquarium.classes
         }
         public override EtreVivant SeReproduire(EtreVivant partenaire)
         {
-            if ((this.PtsVie > 5 && partenaire.PtsVie >5) && (this.GetType() == partenaire.GetType()))
+
+            if (this.PtsVie < 5 || partenaire.PtsVie < 5 || this.Sexe == partenaire.Sexe || this.GetType() != partenaire.GetType())
             {
+                return null;
+
+            } else if ((this.PtsVie > 5 && partenaire.PtsVie >5) && (this.GetType() == partenaire.GetType()))
+                {
                 
                 int rdnValue = RandomAll.GetRandom(1);
 
@@ -56,7 +61,7 @@ namespace Csharquarium.classes
                 }
 
 
-                return null;
+                
             }
             return null;
         }
