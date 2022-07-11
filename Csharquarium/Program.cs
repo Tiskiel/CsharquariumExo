@@ -2,6 +2,7 @@
 using Csharquarium.Enumeration;
 using Csharquarium.classes;
 using Csharquarium.StreamReadWrite;
+Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 Sole sole1 = new Sole (Sexe.Femelle, "fifie", 16);
 Sole sole2 = new Sole(Sexe.Male, "Riri", 12);

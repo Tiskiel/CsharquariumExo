@@ -48,7 +48,7 @@ namespace Csharquarium.classes
                     {
                         naissance.Add(bb);
                         
-                        Console.WriteLine($"🌾 Le bébé algue est né 🌾"); 
+                        Console.WriteLine($"{Emoji.Seedling} Le bébé algue est né {Emoji.Seedling}"); 
                     }
 
                 EtreVivant bbP = ev.SeReproduire(LiVivant[RandomAll.GetRandom(LiVivant.Count)]);
